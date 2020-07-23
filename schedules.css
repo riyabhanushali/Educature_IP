@@ -1,0 +1,35 @@
+.bg {
+  width: 100%;
+  height:290px;
+  background-image: url('3.jpg');
+  background-size: cover;
+  border: 1px solid black;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+}
+
+*{
+	margin:0px;
+	padding:0px;
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 992px)
+.container {
+    width: 970px;
+}
+@media (min-width: 768px)
+.container {
+    width: 950px;
+}
+
+.bg h1{
+	color:white;
+}
+

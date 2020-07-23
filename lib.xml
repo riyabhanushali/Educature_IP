@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="bookstore.xsl" type="text/xsl" ?>
+
+<Bookstore>
+<Book>
+
+<title>BookTitle1</title>
+<author>reema theraja</author>
+<year>2005</year>
+<price>35.00</price>
+</Book>
+
+<Book>
+<title>BookTitle2</title>
+<author>reema theraja</author>
+<year>2005</year>
+<price>35.00</price>
+</Book>
+
+<Book>
+<title>BookTitle3</title>
+<author>reema theraja</author>
+<year>2005</year>
+<price>35.00</price>
+</Book>
+<Book>
+<title>BookTitle4</title>
+<author>reema theraja</author>
+<year>2005</year>
+<price>35.00</price>
+</Book>
+<Book>
+<title>BookTitle5</title>
+<author>reema theraja</author>
+<year>2005</year>
+<price>35.00</price>
+
+</Book>
+</Bookstore>
+</xml:stylesheet>
+
+

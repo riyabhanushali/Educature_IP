@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<title>EDUCATURE</title>
+		<script src="ajax.js"></script>
+		<!-- Google font -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700%7CLato:300,400" rel="stylesheet"> 
+		
+		<!-- Bootstrap -->
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+
+		<!-- Owl Carousel -->
+		<link type="text/css" rel="stylesheet" href="css/owl.carousel.css" />
+		<link type="text/css" rel="stylesheet" href="css/owl.theme.default.css" />
+		
+		<!-- Font Awesome Icon -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<!-- Custom stlylesheet -->
+		<link type="text/css" rel="stylesheet" href="css/style1.css"/>
+		<
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+    </head>
+	<style>
+	#feature-section {
+    padding: 0px 10%;
+}
+section{
+display:block;
+}
+* {
+    font-family: 'Open Sans', sans-serif;
+   
+    box-sizing: border-box;
+}
+
+.rank-header {
+    font-weight: 100;
+    text-align: center;
+    padding-bottom: 1%;
+}
+#feature {
+    padding: 0px ;
+}
+#news>.row {
+    margin: 0;
+	padding:0;
+}
+.col-sm-3, .col-md-3{
+	    position: relative;
+    min-height: 1px;
+	padding:0;
+
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.front {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.bottom-header {
+    text-align: center;
+    padding: 3%;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    font-size: 1.5em;
+}
+.back {
+    opacity: 0;
+    
+    transition: ease-in-out, opacity .35s ease-in-out;
+}
+span.back-title {
+    color: #ec3237;
+    font-size: 2rem;
+    display: block;
+    padding-top: 45%;
+} 	
+p.back-para {
+    padding-top: 20%;
+    color: #fff;
+}
+.back {
+    width: 100%;
+    text-align: center;
+    background: rgba(0,0,0,0.9);
+    height: 240px;
+    position: absolute;
+    top: 0;
+    padding: 0px 15%;
+}
+.col-sm-4{
+
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+}
+@media only screen and (max-width: 769px)
+.feature-icon {
+    width: 40%;
+}
+@media only screen and (max-width: 769px)
+.feature-icon {
+  
+    margin: 0 auto;
+    display: block;
+}
+img {
+    vertical-align: middle;
+}
+img {
+    border: 0;
+}
+@media only screen and (max-width: 769px)
+.feature-title {
+    font-size: 1.3em;
+}
+.feature-title {
+    color: #6D7272;
+    
+    text-align: left;
+    font-weight: 700;
+}
+h3,p{
+	
+    font-family: 'Open Sans', sans-serif;
+}
+.feature-icon{
+position:relative;
+border-radius:50%;
+border:8px solid black;
+}
+h3{
+line-height: 1.1;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+h3 {
+    display: block;
+   
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    
+}
+.feature-para {
+    color: #6D7272;
+    font-size: 1em;
+    text-align: center;
+    padding-bottom: 20px;
+}
+p {
+    margin: 0 0 10px;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+a {
+    background-color: transparent;
+}
+#news-section {
+    padding: 5% 0;
+}
+.lecture-schedule {
+    height: 240px;
+    background-size: cover!important;
+}
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+  background: #484848;
+}
+
+.hovereffect .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  padding: 50px 20px;
+}
+
+.hovereffect img {
+  display: block;
+  position: relative;
+  max-width: none;
+  width: calc(100% + 28px);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-10px,0,0);
+  transform: translate3d(-10px,0,0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.hovereffect:hover img {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.hovereffect h2 {
+  text-transform: uppercase;
+  color: black;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  overflow: hidden;
+  padding: 0.5em 0;
+  background-color: transparent;
+}
+
+.hovereffect h2:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  content: '';
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(-100%,0,0);
+  transform: translate3d(-100%,0,0);
+}
+
+.hovereffect:hover h2:after {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.hovereffect a, .hovereffect p {
+  color: #0000A0;
+  opacity: 0.1;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(100%,0,0);
+  transform: translate3d(100%,0,0);
+}
+
+.hovereffect:hover a, .hovereffect:hover p {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+@media screen and (max-width: 500px) {
+  .row {
+    width: 100%;
+  }
+}
+	</style>
+	<body>
+	
+		<!-- Header --> 
+		<header id="header">
+			<!-- Top Header -->
+			<div id="top-header" style="background-color:black;">
+				<div class="container">
+					<div class="header-links">
+						<ul>
+							<li><a href="about.html">About us</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							
+							<li><a href="enquiry1.html">Enquiry</a></li>
+							<li><a href="login.html"><i class="fa fa-sign-in"></i> Login</a></li>
+						</ul>
+					</div>
+					<div class="header-social">
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook"></i></a></lio>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+							<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+							<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- /Top Header -->
+			
+			<!-- Center Header -->
+			<div id="center-header">
+				<div class="container">
+					<div class="header-logo">
+					<div class=".logo">
+	<link type="text/css" rel="stylesheet" href="a.css">
+						<a href="#" class="logo"><img height="100px" width="50px"src="logo2.png" alt=""></a>
+					</div>
+					<div class="header-ads">
+						<img class="center-block" src="./img/ad-2.jpg" alt=""> 
+					</div>
+					</div>
+				</div>
+			</div>
+			<!-- /Center Header -->
+			
+			<!-- Nav Header -->
+			<div id="nav-header">
+				<div class="container">
+					<nav id="main-nav">
+						<div class="nav-logo">
+							<a href="#" class="logo"><img src="logo2.png" alt=""></a>
+						</div>
+						<ul class="main-nav nav navbar-nav">
+							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="news.html">News</a></li>
+														
+							<li><a href="video.php">Videos</a></li>
+							<li><a href="events.html">Event</a></li>
+							<li><a href="ddd.html" >Students Zone</a></li>
+							
+						</ul>
+					</nav>
+					<div class="button-nav">
+						<button class="search-collapse-btn"><i class="fa fa-search"></i></button>
+						<button class="nav-collapse-btn"><i class="fa fa-bars"></i></button>
+						<div class="search-form">
+							<form>
+								<input id="nam" type="text"  onkeyup="sendString(this.value)">
+								<p style="color:white"> Suggested words are<span id="sug"></span></p>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /Nav Header -->
+		</header>
+		<!-- /Header -->
+		
+		<!-- Owl Carousel 1 -->
+		<div id="owl-carousel-1" class="owl-carousel owl-theme center-owl-nav">
+			<!-- ARTICLE -->
+			<article class="article thumb-article">
+				<div class="article-img">
+					<img height="500px" width="80px"src="3.jpg" alt="">
+				</div>
+				<div class="article-body">
+				
+					<h2 class="article-title"><a href="#">WE HAVE THE BEST STUDY MATERIALS AVAILABLE...</a></h2>
+					
+				</div>
+			</article>
+			<!-- /ARTICLE -->
+			
+			<!-- ARTICLE -->
+			<article class="article thumb-article">
+				<div class="article-img">
+					<img height="500px" width="80px"src="4.jpg" alt="">
+				</div>
+				<div class="article-body">
+				
+					<h2 class="article-title"><a href="#">WE MAKE LEARNING FUN...</a></h2>
+					
+				</div>
+			</article>
+			<!-- /ARTICLE -->
+			
+			<!-- ARTICLE -->
+			<article class="article thumb-article">
+				<div class="article-img">
+					<img height="500px" width="80px"src="6.jpg" alt="">
+				</div>
+				<div class="article-body">
+					
+					<h2 class="article-title"><a href="#">EASY STUDY AT HOME...</a></h2>
+					
+				</div>
+			</article>
+			<!-- /ARTICLE -->
+		</div>
+		<!-- /Owl Carousel 1 -->
+		<!-- KEY FEATURES SECTION -->
+		<section id="feature-section">
+<h2 class="rank-header" style="font-weight:100!important;">Choose Educature,  #1 Recommended Coaching Classes</h2>
+<div class="row" id="feature">
+
+
+		<div class="col-sm-4">
+							<img src="10.png" class="feature-icon" height="250px" width="250px">
+						<h3 class="feature-title">58 Years Of Leadership</h3>
+			<p class="feature-para"></p>
+		</div>
+		<div class="col-sm-4">
+							<img src="11.png" class="feature-icon" height="250px" width="250px">
+						<h3 class="feature-title">50+ Centers across India</h3>
+			<p class="feature-para"></p>
+		</div>
+		<div class="col-sm-4">
+							<img src="12.png" class="feature-icon"  height="250px" width="250px">
+						<h3 class="feature-title">50000+ Students Trained/Year</h3>
+			<p class="feature-para"></p>
+		</div>
+		<div class="col-sm-4">
+						<h1 class="feature-title"></h1>
+			<p class="feature-para"></p>
+		</div>
+	</div>
+	</section>
+	<!-- /KEY FEATURES SECTION -->
+	
+	<hr>
+<!-- NEWS SECTION -->
+		<section id="news">
+		<div class="row">
+			<!-- LECTURE SCHEDULE  -->
+      <!-- <div class="col-sm-3 col-md-3 "> -->
+			<div class="col-sm-3 col-md-3 lecture-schedule">
+    <div class="hovereffect">
+        <img class="img-responsive" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzCHunehn1DfIwv1YK7zTC-Tnxbxq9WuY9BSng3mN6mDv2n5-o" alt="">
+            <div class="overlay">
+                <h2>LECTURE SCHEDULE</h2>
+				<p>
+					<a href="schedules.html">SCHEDULES Of TODAY</a><br>
+					<a href="scheduleto.html">SCHEDULES Of TOMORROW</a>
+
+				</p>
+            </div>
+    </div>
+</div>
+    <!-- </div> -->
+
+			<!-- TEST SCHEDULE  -->
+      <!-- <div class="col-sm-3 col-md-3"> -->
+      			<div class="col-sm-3 col-md-3 lecture-schedule">
+    <div class="hovereffect">
+        <img class="img-responsive" src="https://images.pexels.com/photos/159621/open-book-library-education-read-159621.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+            <div class="overlay">
+                <h2>TEST SCHEDULE</h2>
+				<p>
+					<a href="test.html">"TEST SCHEDULE"</a>
+				</p>
+            </div>
+    </div>
+</div>
+    <!-- </div> -->
+			<!-- LATEST NEWS  -->
+      <!-- <div class="col-sm-3 col-md-3"> -->
+			<div class="col-sm-3 col-md-3 lecture-schedule">
+    <div class="hovereffect">
+        <img class="img-responsive" src="https://images.pexels.com/photos/433333/pexels-photo-433333.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+            <div class="overlay">
+                <h2>LATEST NEWS</h2>
+				<p>
+					<a href="news.html">"LATEST NEWS"</a>
+				</p>
+            </div>
+    </div>
+</div>
+    <!-- </div> -->
+
+			<!-- DEMO LECTURE  -->
+      <!-- <div class="col-sm-3 col-md-3 "> -->
+     <div class="col-sm-3 col-md-3 lecture-schedule">
+    <div class="hovereffect">
+        <img class="img-responsive" src="https://images.pexels.com/photos/590493/pexels-photo-590493.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+            <div class="overlay">
+                <h2>DEMO LECTURE </h2>
+				<p>
+					<a href="demo.html">"DEMO LECTURE"</a>
+				</p>
+            </div>
+    </div>
+</div>
+			<!-- </div> -->
+    </div>
+	</section>
+	<!-- /NEWS SECTION -->
+		<!-- FOOTER -->
+		<div class="footer">
+			<div class="inner-footer">
+			<div class="footer-items">
+				<h1>Computers & Codes</h1>
+					<p>
+						 programming languages are very different to natural languages. Natural languages are ambiguous, with many different layers of meaning – sarcasm, innuendo, and those sorts of things. That’s great if you’re communicating with a human, but computers don’t understand any of that.
+					</p>
+			</div>
+			
+			<div class="footer-items">
+				<h2>Quick linkss</h2>
+				<div class="border"></div>
+					<ul>
+						<a href="/"><li>Home</li></a>
+						<a href="contact.html"><li>Contact Us</li></a>
+						<a href="about.html"><li>About Us</li></a>
+						<a href="vides.html"><li>Videos</li></a>
+						
+					</ul>
+			</div>
+			<div class="footer-items">
+				<h2>Tutorials</h2>
+				<div class="border"></div>
+					<ul>
+						<a href="pythn.html"><li>Python</li></a>
+						<a href="c.html"><li>C & C++</li></a>
+						<a href="java.html"><li>Java</li></a>
+						<a href="web.html"><li>Webo Development</li></a>
+						<a href="am3.html"><li>AM-III</li></a>
+					</ul>
+			</div>
+			<div class="footer-items">
+				<h2>Contact Us</h2>
+				<div class="border"></div>
+					<ul>
+						<li><i class="fa fa-map-marker" aria-hidden="true">W.T.Patil Marg near Dukes Company,Chembur</i></li>
+						<li><i class="fa fa-phone" aria-hidden="true">022-225-678</i></li>
+						<li><i class="fa fa-envelope" aria-hidden="true">amisha.das@sakec.ac.in</i></li>
+					</ul>
+				<div class="social-media">
+					<a href="/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a href="/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					<a href="/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+					<a href="/"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+
+					
+				</div>
+			</div>
+			</div>
+			<div class="footer-bottom">
+			Copyrighto & copy;Educature 2019.All right reserved.
+			
+			</div>
+		</div>
+		<!-- Back to top -->
+		<div id="back-to-top"></div>
+		<!-- Back to top -->
+		
+		<!-- jQuery Plugins -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/main.js"></script>
+
+	</body>
+</html>

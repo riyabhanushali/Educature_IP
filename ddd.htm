@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:output method="xml" indent="yes"/>
+
+<xsl:template match="/">
+<html>
+<head>
+<style type="text/css">
+     .Link
+      {
+	color:orange;
+	font-family:calibri;
+	font-weight:bold;
+	font-size:14px;
+	cursor:pointer;
+	}
+</style>
+</head>
+<body>
+
+<div id="mydiv">
+<p>change this</p>
+<button  id="res" class="btn" onclick="loadXMLDoc()">books available</button>
+
+<script>
+
+
+
+
+
+function loadXMLDoc()
+{
+var xmlhttp;
+
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("mydiv").innerHTML=xmlhttp.responseText;
+    }
+  }
+
+xmlhttp.open("GET","bookstore1.xml",false);
+xmlhttp.send();
+
+}
+</script>
+<table cellpadding="0" style="background-color:silver;color:gray;" 
+
+			align="center" cellspacing="0" border="1" width="61%">
+	<tr style="font-weight:bold;">
+	<td style="width:2%;">Supplier ID</td>
+	<td style="width:12%;">Company Name</td>
+	<td style="width:10%;">Contact Name</td>
+       <td style="width:9%;">Address</td>
+	<td style="width:8%;">City</td>
+	<td style="width:7%;">Country</td>
+	<td style="width:5%;">Phone</td>
+	<td style="width:3%;">Fax</td>
+	<td style="width:5%;">Delete</td>
+	</tr>
+	<xsl:for-each select ="NewDataSet/Table">
+	<xsl:variable name="TrID">Tr<xsl:number/>
+	</xsl:variable>
+	<xsl:variable name="AID">A<xsl:number/>
+	</xsl:variable>
+	<xsl:variable name="hidID">hid<xsl:number/>
+	</xsl:variable>
+	<tr id="{$TrID}">
+	<td style="width:2%;">
+	<xsl:value-of select="SupplierID"/>
+	</td>
+	<td style="width:12%;">
+	<xsl:value-of select="CompanyName"/>
+	</td>
+	<td style="width:10%;">
+	<xsl:value-of select="ContactName"/>
+	</td>
+       <td style="width:9%;">
+	<xsl:value-of select="Address"/>
+	</td>
+	<td style="width:8%;">
+	<xsl:value-of select="City"/>
+	</td>
+      <td style="width:7%;">
+	<xsl:value-of select="Country"/>
+	</td>
+	<td style="width:5%;">
+	<xsl:value-of select="Phone"/>
+	</td>
+	<td style="width:3%;">
+	<xsl:value-of select="Fax"/>
+	</td>
+       <td style="width:5%;">
+	<xsl:variable name="hidValue">
+	<xsl:value-of select="SupplierID"/>
+	</xsl:variable>
+	<input id="{$hidID}" type="hidden" value="{$hidValue}"></input>
+	<a id="{$AID}" class="Link" onmouseover="this.cursor:pointer;" 
+
+			onclick="return DeleteRow(this);">Delete</a></td>
+	</tr>
+	</xsl:for-each>
+	</table>
+</div>
+</body>
+</html>
+</xsl:template>
+</xsl:stylesheet>
